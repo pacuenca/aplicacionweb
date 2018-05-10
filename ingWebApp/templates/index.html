@@ -1,0 +1,319 @@
+{% extends "master.html" %}
+{% load staticfiles %}
+{% load extras %}
+
+{% block titulo %}
+  Aves Ecuador | GP3
+{% endblock %}
+
+{% block namePage %}
+  <a class="nombre-Pag js-scroll-trigger" href="#page-top">Aves Ecuador</a>
+{% endblock %}
+
+{% block itemsMenu %}
+  <li class="item">
+    <a class="nav-link js-scroll-trigger" href="#block-especies">Especies <i class="fab fa-earlybirds"></i></a>
+  </li>
+  <li class="item">
+    <a class="nav-link js-scroll-trigger" href="#block-mapa">Mapa <i class="fas fa-map-marker-alt"></i></a>
+  </li>
+  <li class="item">
+    <a class="nav-link js-scroll-trigger" href="#block-estadistica">Estadisticas <i class="fas fa-chart-pie"></i></a>
+  </li>
+{% endblock %}
+
+
+{% block contenido %}
+
+<div id="box-img-main" style="background-image:url('{% static 'img/fondo.jpg' %}')">
+  <div class="box-opacidad">
+
+  </div>
+</div>
+<section class="container slideanim pd-cont" id="block-especies">
+  <h2 class="centrar">Especies</h2>
+  <div id="det-especy">
+    <p>
+      Estas son algunas de las especies que se encuentran distribuidas en los paises de Ecuador y Peru.
+    </p>
+  </div>
+  <div class="row">
+    {% for x in especie %}
+      <div class="col-md-4">
+        {% if tipoBox|getContLista:forloop.counter0 == 'bloque2' %}
+        <div class="box-especies {{ tipoBox|getContLista:forloop.counter0 }}">
+          <div class="cont-imagen">
+              <img class="img-especie" src="{{x.url}}">
+          </div>
+          <div class="cont-btn">
+            <a href="{% url 'ir-especie' x.especies_idespecies.idespecies %}" class="btn-especie name-specy">{{ x.especies_idespecies.nombre }}</a>
+          </div>
+        </div>
+        {% elif tipoBox|getContLista:forloop.counter0 == 'bloque5' %}
+        <div class="box-especies {{ tipoBox|getContLista:forloop.counter0 }}">
+          <div class="cont-btn">
+            <a href="{% url 'ir-especie' x.especies_idespecies.idespecies %}" class="btn-especie name-specy">{{ x.especies_idespecies.nombre }}</a>
+          </div>
+          <div class="cont-imagen">
+              <img class="img-especie" src="{{x.url}}">
+          </div>
+        </div>
+        {% else %}
+        <div class="box-especies {{ tipoBox|getContLista:forloop.counter0 }}">
+            <div class="cont-imagen">
+                <img class="img-especie" src="{{x.url}}">
+            </div>
+            <div class="cont-btn">
+              <div class="cont">
+                <h3 class="name-specy">{{ x.especies_idespecies.nombre }}</h3>
+                <a href="{% url 'ir-especie' x.especies_idespecies.idespecies %}" class="btn-especie align-middle">Ver especie</a>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+
+</section>
+
+
+<section class="pd-cont" id="block-mapa">
+  <h3 class="centrar">Número de aves por provincias de cada país</h3>
+  <div id="bx-radio">
+      <form class="form">
+        <input type="radio" name="pais" value="ecuador" id="ec" checked="checked">
+        <label for="ec" >Ecuador </label>
+
+        <input type="radio" name="pais" value="peru" id="pe">
+        <label for="pe">Peru</label>
+      </form>
+  </div>
+
+  <div id="map">
+  </div>
+
+
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcYVGjUno8qc20yhUk92PxpmhnLF3gEm8&callback=initMap">
+    </script>
+    </div>
+
+<br/>
+
+</section>
+
+<section class="container pd-cont" id="block-estadistica">
+<h3 class="centrar">Estadisticas de Aves</h3>
+<div id="opciones">Provincias de
+  <select id="opt">
+    <option value="ecu">Ecuador</option>
+    <option value="pe">Perú</option>
+  </select>
+</div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div id="chartContainer"></div>
+    </div>
+
+    <div class="col-md-6">
+
+      <div class="cont-detalle dt-bd-right">
+        <h3 class="centrar">
+         Información de la Gráfica
+        </h3>
+        <p>
+          Esta gráfica presenta el porcentaje de las provincias con más aves, según su cantidad:<br />
+          <span id="datgra1"></span>
+          <span id="datgra2"></span>
+        </p>
+      </div>
+      <a type="button" href="{% url 'graficas'%}" class="btn btn-info ">Más Gráficas <i class="fas fa-chart-pie"></i></a>
+    </div>
+  </div>
+
+
+</section>
+
+{% endblock %}
+
+{% block scrip %}
+
+<script >
+  $(document).ready(function(){
+    var select = document.getElementById('opt');
+    var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        title:{
+          text: "Provincias",
+          horizontalAlign: "center"
+        },
+        data: [{
+            type: "doughnut",
+            startAngle: 60,
+            //innerRadius: 60,
+            indexLabelFontSize: 14,
+            indexLabel: "{label} - #percent%",
+            toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+              dataPoints: [
+                {% for d in ecu %}
+                  {y:{{d.0}}, label:'{{d.2}}'},
+                {% endfor %}
+              ]
+        }]
+    });
+  chart.render();
+    select.addEventListener('change',
+      function(){
+        var selectedOption = this.options[select.selectedIndex];
+        if (selectedOption.value=="ecu") {
+          chart.options.data[0].dataPoints = [
+            {% for d in ecu %}
+              {y:{{d.0}}, label:'{{d.2}}'},
+            {% endfor %}
+          ];
+          chart.render();
+
+          {% for d in ecu %}
+            $("#datgra2").text("");
+            $("#datgra1").append("<br/>"+"<b>"+'{{d.2}}'+" con "+ {{d.0}}+" aves."+ "<br/>");
+          {% endfor %}
+
+        } else if (selectedOption.value=="pe"){
+          chart.options.data[0].dataPoints = [
+            {% for d in pe %}
+              {y:{{d.0}}, label:'{{d.2}}'},
+            {% endfor %}
+          ];
+          chart.render();
+          {% for d in pe %}
+            $("#datgra1").text("");
+            $("#datgra2").append("<br/>"+"<b>"+'{{d.2}}'+" con "+ {{d.0}}+" aves."+ "<br/>");
+
+          {% endfor %}
+        }
+      });
+});
+</script>
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+     var lat;
+     var long;
+     var claveP;
+     claveP =   $( "input[name='pais']" ).val();
+     function IniciarMapa(pais){
+       if (pais == 'ecuador') {
+           lat = -1.325848;
+           long = -78.871101;
+       } else {
+         lat = -7.902795;
+         long = -78.41736;
+       }
+       var myLatlng = new google.maps.LatLng(lat, long);
+       var mapOptions = {
+         zoom: 7,
+         center: myLatlng
+       }
+       var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+       {% for l in lista %}
+
+         var direc= new google.maps.LatLng('{{l.2}}', '{{l.3}}');
+         var iconBase = "{% static 'img/bird.png' %}";
+         var marker = new google.maps.Marker({
+             position: direc,
+             icon: iconBase,
+             title:"Hello World!"
+         });
+         marker.setMap(map);
+         google.maps.event.addListener(marker, 'click', function(){
+           var popup = new google.maps.InfoWindow();
+           var note = 'En {{l.1}}'+' existe '+'{{l.4}} especies';
+           popup.setContent(note);
+           popup.open(map, this);
+         })
+       {% endfor %}
+     }
+    $( "input[name='pais']" ).click(function(){
+        claveP = $(this).val();
+        IniciarMapa(claveP);
+    });
+    IniciarMapa(claveP);
+  });
+
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcYVGjUno8qc20yhUk92PxpmhnLF3gEm8">
+</script>
+
+<script src="https://maps.goog leapis.com/maps/api/js?v=3.exp"></script>
+<script >
+  var selectedValue;
+  var selectedLabel;
+  var latp;
+  var longp;
+
+  $('#mySelect').change(function(){
+    var $selectedOption = $(this).find('option:selected');
+    selectedLabel = $selectedOption.text();
+    selectedValue = $selectedOption.val();
+    $('#iSelected').text(selectedValue );
+  });
+  console.log(selectedValue + " select value");
+  console.log(selectedLabel + 'select label');
+
+  function initialize() {
+
+
+  var myLatlng = new google.maps.LatLng(-3.251408, -79.416991);
+  var mapOptions = {
+    zoom: 6,
+    center: myLatlng
+  }
+  var map = new google.maps.Map(document.getElementById('mapa-prin'), mapOptions);
+
+
+  {% for l in lista %}
+    var marcador = new google.maps.LatLng({{l.2}}, {{l.3}});
+    var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+
+      var marker = new google.maps.Marker({
+          position: marcador,
+          map: map,
+          title: '{{l.1}}',
+          icon: iconBase + 'library_maps.png',
+          animation: google.maps.Animation.DROP,
+      });
+
+      marker.addListener('click', toggleBounce);
+
+
+    google.maps.event.addListener(marker, 'click', function(){
+      var popup = new google.maps.InfoWindow();
+      var note = 'En {{l.1}}'+' existe '+'{{l.4}} especies';
+      popup.setContent(note);
+      popup.open(map, this);
+    })
+
+    function toggleBounce() {
+      if (marker.getAnimation() !== null) {
+        marker.setAnimation(null);
+      } else {
+        marker.setAnimation(google.maps.Animation.BOUNCE);
+      }
+    }
+  {% endfor %}
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+</script>
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+{% endblock %}
