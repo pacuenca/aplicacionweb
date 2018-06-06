@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>InstaInfo</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/estilos.css">
+	<meta charset="utf-8">
+</head>
+
+<header>
+	<span class="titulo">
+		<img src="">
+		<h1>InstaInfo</h1>
+	</span>
+
+	<nav>
+		 <ul id="ejm1">
+            <a href="#">Home</a>
+            <a href="#">Estadísticas</a>
+            <a href="#">Gráficas</a>
+	</nav>
+
+	<span class="login">
+		<a href="">Sign In</a>
+	</span>
+</header>
+<body>
+
+<section class="home">
+	<section class="izquierda">
+		<h2>Creando Infografías Innovadoras e Informátivas ...</h2>
+	</section>
+
+	<section class="derecha">
+		<h5>derecha</h5>
+	</section>
+</section>
+<hr/>
+
+<section class="estadisticas">
+	<span>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</span>
+	<div id="grafico1">
+		<script>
+		window.onload = function() {
+
+		var chart = new CanvasJS.Chart("grafico1", {
+			theme: "light2", // "light1", "light2", "dark1", "dark2"
+			exportEnabled: true,
+			animationEnabled: true,
+			title: {
+				text: "Desktop Browser Market Share in 2016"
+			},
+			data: [{
+				type: "pie",
+				startAngle: 25,
+				toolTipContent: "<b>{label}</b>: {y}%",
+				showInLegend: "true",
+				legendText: "{label}",
+				indexLabelFontSize: 16,
+				indexLabel: "{label} - {y}%",
+				dataPoints: [
+					{ y: 51.08, label: "Chrome" },
+					{ y: 27.34, label: "Internet Explorer" },
+					{ y: 10.62, label: "Firefox" },
+					{ y: 5.02, label: "Microsoft Edge" },
+					{ y: 4.07, label: "Safari" },
+					{ y: 1.22, label: "Opera" },
+					{ y: 0.44, label: "Others" }
+				]
+			}]
+		});
+		chart.render();
+
+		}
+
+		</script>
+	</div>
+
+	
+</section>
+<hr/>
+
+<section class="graficas">
+	<span>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</span>
+
+	<div id="grafico2">
+		
+	</div>
+</section>
+
+<footer>
+	<section class="colu1">
+		<h5>CONTACTOS</h5>
+		<section class="fo1">
+			<img src="../static/image/con.png">
+			<h4>Klever Sarango</h4>
+			<h4>kf2sarango@gamil.com</h4>
+		</section>
+
+		<section class="fo1">
+			<img src="../static/image/con.png">
+			<h4>Klever Sarango</h4>
+			<h4>pacuenca2012@gmail.com</h4>
+		</section>
+
+		<section class="fo1">
+			<img src="../static/image/con.png">
+			<h4>Klever Sarango</h4>
+			<h4>pacuenca2012@gmail.com</h4>
+		</section>
+		
+	</section>
+
+	<section class="colu2">
+		<span>UTPL
+		</span>
+	</section>
+
+</footer>
+
+</body>
+
+</html>
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
