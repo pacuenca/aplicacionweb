@@ -10,6 +10,7 @@ header{
 	display: inline-block;
 	background: #794bc4;
 	padding-bottom: 1%;
+	position: fixed;
 }
 
 header span h1:hover{
@@ -124,17 +125,36 @@ body{
 
 .estadisticas{
 	width: 100%;
+	margin-top: 2%;
+	margin-bottom: 3%;
+	text-align: justify;
+	padding: 2%;
+}
+
+.estadisticas h2{
+	text-align: center;
+	padding-bottom: 1%;
+	color: #4f0299;
 }
 
 #grafico1{
 	width: 50%;
 	height: 300px;
+	margin-top: 3%;
 }
-
-
 
 .graficas{
 	width: 100%;
+	margin-top: 5%;
+	margin-bottom: 3%;
+	text-align: justify;
+	padding: 2%;
+	color: #4f0299;
+}
+
+.graficas h2{
+	text-align: center;
+	padding-bottom: 1%;
 }
 
 #grafico2{
@@ -143,8 +163,10 @@ body{
 }
 
 hr{
+	width: 90%;
 	color: #794bc4;
 	size: "30";
+	margin: auto;
 }
 
 
@@ -153,31 +175,54 @@ footer{
 	color: white;
 	display: block;
 	background: #794bc4;
+	padding-bottom: 2%;
 }
 
 .colu1{
-	width: 70%;
+	width: 75%;
 	display: inline-block;
 	text-align: center;
-	margin-top: 2%;
+	margin-top: 1%;
+	color: black;
 }
 
 .fo1{
 	width: 20%;
 	display: inline-block;
-	margin-top: 5%;
+	margin-top: 2%;
 	margin-right: 5%;
-	margin-left: 5%;
+	margin-left: 1%;
+	color: white;
+}
+
+.fo1 div{
+	margin-top: 5%;
+	text-align: left;
+}
+
+.fo1 div:hover{
+	color: black;
+}
+
+.fo1 img{
+	width: 100px;
+	height: 100px;
+    border-radius:100px;
+}
+
+.fo1 img:Hover{
+	-webkit-transform:scale(1.3);transform:scale(1.3);
 }
 
 
 
 .colu2{
-	width: 28%;
+	width: 24%;
 	display: inline-block;
 	vertical-align: top;
 	margin-top: 2%;
 	text-align: center;
+	color: black;
 }
 
 
