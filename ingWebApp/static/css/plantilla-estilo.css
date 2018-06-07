@@ -1,0 +1,189 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+body{
+	width: 100%;
+	background: white;
+}
+
+header{
+	width: 100%;
+	background: #1090F3;
+	padding: 3%;
+}
+
+header h1{
+	text-align: center;
+}
+
+.parte1{
+	width: 100%;
+}
+
+.iz1{
+	width: 28%;
+	display: inline-block;
+	text-align: justify;
+	margin: 2%;
+	vertical-align: top;
+}
+
+.iz1 img{
+	width: 35%;
+	height: 35%;
+    border-radius:100px;
+    margin-left: 35%;
+}
+
+.cen1{
+	width: 28%;
+	display: inline-block;
+	text-align: justify;
+	margin: 2%;
+	vertical-align: top;
+}
+
+.cen1 img{
+	width: 35%;
+	height: 35%;
+    border-radius:100px;
+    margin-left: 35%;
+}
+
+
+.de1{
+	width: 28%;
+	display: inline-block;
+	text-align: justify;
+	margin: 2%;
+	vertical-align: top;
+}
+
+.de1 img{
+	width: 35%;
+	height: 35%;
+    border-radius:100px;
+    margin-left: 35%;
+}
+
+hr{
+	width: 1%;
+	height: 300px;
+	display: inline-block;
+}
+
+
+.parte2{
+	width: 100%;
+}
+
+.parte2 h2{
+	width: 100%;
+	text-align: center;
+	background: #1090F3;
+	margin-bottom: 3%;
+	margin-top: 3%;
+	padding: 3%;
+	display: block;
+}
+
+#grafico1{
+	width: 80%;
+	margin: auto;
+	display: block;
+	height: 400px;
+}
+
+.parte3{
+	width: 100%;
+}
+
+.parte3 h2{
+	width: 100%;
+	text-align: center;
+	background: #1090F3;
+	margin-bottom: 3%;
+	margin-top: 3%;
+	padding: 3%;
+	display: block;
+}
+
+.iz3{
+	width: 50%;
+	display: inline-block;
+}
+
+.fig1{
+	width: 85%;
+	margin-left: 10%;
+	margin-top: 3%;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+	color: black;
+	font-size: 18px;
+	font-weight: 400;
+	text-align: center;
+	overflow: hidden;
+	padding: 20px;
+	border-radius: 35px 0px 35px 0px;
+	-moz-border-radius: 35px 0px 35px 0px;
+	-webkit-border-radius: 35px 0px 35px 0px;
+	border: 2px solid #1090F3;
+}
+
+.fig2{
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 3%;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+	color: black;
+	font-size: 18px;
+	font-weight: 400;
+	text-align: center;
+	overflow: hidden;
+	padding: 20px;
+	border-radius: 35px 0px 35px 0px;
+	-moz-border-radius: 35px 0px 35px 0px;
+	-webkit-border-radius: 35px 0px 35px 0px;
+	border: 2px solid #1090F3;
+}
+
+.fig3{
+	width: 75%;
+	margin-left: 10%;
+	margin-top: 3%;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+	color: black;
+	font-size: 18px;
+	font-weight: 400;
+	text-align: center;
+	overflow: hidden;
+	padding: 20px;
+	border-radius: 35px 0px 35px 0px;
+	-moz-border-radius: 35px 0px 35px 0px;
+	-webkit-border-radius: 35px 0px 35px 0px;
+	border: 2px solid #1090F3;
+}
+
+.de3{
+	width: 48%;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 1.5%;
+	border: 2px solid #1090F3;
+}
+
+.de3 p{
+	text-align: justify;
+	padding: 7.5%;
+}
+
+footer{
+	width: 100%;
+	background: #1090F3;
+	padding: 1%;
+	margin-top: 3%;
+	text-align: center;
+}
