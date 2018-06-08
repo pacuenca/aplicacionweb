@@ -1,7 +1,3 @@
-
--- -----------------------------------------------------
--- Table `usuarios`
--- -----------------------------------------------------
 CREATE SEQUENCE usuarios_seq;
 
 CREATE TABLE IF NOT EXISTS usuarios (
@@ -18,27 +14,36 @@ CREATE TABLE IF NOT EXISTS usuarios (
 
 
 -- -----------------------------------------------------
--- Table `presentaciones`
+-- Table `registro`
 -- -----------------------------------------------------
-CREATE SEQUENCE presentaciones_seq;
+CREATE SEQUENCE registro_seq;
 
-CREATE TABLE IF NOT EXISTS presentaciones (
-  idpresentacione INT NOT NULL DEFAULT NEXTVAL ('presentaciones_seq'),
-  nombre VARCHAR(45) NULL,
-  concepto VARCHAR(45) NULL,
-  fecha_creacion DATE NULL,
-  ultima_modificacion TIMESTAMP(0) NULL,
-  usuarios_idusuario INT NOT NULL,
-  PRIMARY KEY (idpresentacione)
+CREATE TABLE IF NOT EXISTS registro (
+  idregistro INT NOT NULL DEFAULT NEXTVAL ('registro_seq'),
+  fecha DATE NULL,
+  id_usuario INT NOT NULL,
+  PRIMARY KEY (idregistro)
  ,
-  CONSTRAINT fk_presentaciones_usuarios
-    FOREIGN KEY (usuarios_idusuario)
+  CONSTRAINT fk_registro_usuarios1
+    FOREIGN KEY (id_usuario)
     REFERENCES usuarios (idusuario)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ;
 
-CREATE INDEX fk_presentaciones_usuarios_idx ON presentaciones (usuarios_idusuario ASC);
+CREATE INDEX fk_registro_usuarios1_idx ON registro (id_usuario ASC);
+
+
+-- -----------------------------------------------------
+-- Table `categoria`
+-- -----------------------------------------------------
+CREATE SEQUENCE categoria_seq;
+
+CREATE TABLE IF NOT EXISTS categoria (
+  idcategoria INT NOT NULL DEFAULT NEXTVAL ('categoria_seq'),
+  nombre VARCHAR(45) NOT NULL,
+  PRIMARY KEY (idcategoria))
+;
 
 
 -- -----------------------------------------------------
@@ -50,17 +55,48 @@ CREATE TABLE IF NOT EXISTS items (
   idItem INT NOT NULL DEFAULT NEXTVAL ('items_seq'),
   campo VARCHAR(45) NULL,
   valor VARCHAR(525) NULL,
-  presentaciones_idpresentacione INT NOT NULL,
+  registro_idregistro INT NOT NULL,
+  categoria_idcategoria INT NOT NULL,
   PRIMARY KEY (idItem)
  ,
-  CONSTRAINT fk_items_presentaciones1
-    FOREIGN KEY (presentaciones_idpresentacione)
-    REFERENCES presentaciones (idpresentacione)
+  CONSTRAINT fk_items_registro1
+    FOREIGN KEY (registro_idregistro)
+    REFERENCES registro (idregistro)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT fk_items_categoria1
+    FOREIGN KEY (categoria_idcategoria)
+    REFERENCES categoria (idcategoria)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ;
 
-CREATE INDEX fk_items_presentaciones1_idx ON items (presentaciones_idpresentacione ASC);
+CREATE INDEX fk_items_registro1_idx ON items (registro_idregistro ASC);
+CREATE INDEX fk_items_categoria1_idx ON items (categoria_idcategoria ASC);
+
+
+-- -----------------------------------------------------
+-- Table `infografias`
+-- -----------------------------------------------------
+CREATE SEQUENCE infografias_seq;
+
+CREATE TABLE IF NOT EXISTS infografias (
+  idinfografia INT NOT NULL DEFAULT NEXTVAL ('infografias_seq'),
+  nombre VARCHAR(45) NULL,
+  concepto VARCHAR(45) NULL,
+  fecha_creacion DATE NULL,
+  ultima_modificacion TIMESTAMP(0) NULL,
+  usuarios_idusuario INT NOT NULL,
+  PRIMARY KEY (idinfografia)
+ ,
+  CONSTRAINT fk_presentaciones_usuarios
+    FOREIGN KEY (usuarios_idusuario)
+    REFERENCES usuarios (idusuario)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+;
+
+CREATE INDEX fk_presentaciones_usuarios_idx ON infografias (usuarios_idusuario ASC);
 
 
 -- -----------------------------------------------------
@@ -77,9 +113,15 @@ CREATE TABLE IF NOT EXISTS detalles (
  ,
   CONSTRAINT fk_detalles_presentaciones1
     FOREIGN KEY (presentaciones_idpresentacione)
-    REFERENCES presentaciones (idpresentacione)
+    REFERENCES infografias (idinfografia)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ;
 
 CREATE INDEX fk_detalles_presentaciones1_idx ON detalles (presentaciones_idpresentacione ASC);
+
+
+/* SET SQL_MODE=@OLD_SQL_MODE; */
+/* SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS; */
+/* SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS; */
+
