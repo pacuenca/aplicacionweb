@@ -32,6 +32,7 @@ class Detalles(models.Model):
         db_table = 'detalles'
 
 
+
 class Infografias(models.Model):
     idinfografia = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=45, blank=True, null=True)
