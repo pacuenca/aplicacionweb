@@ -37,7 +37,7 @@ header .titulo{
 
 header nav{
 	width: 35%;
-	margin-left: 8%;
+	margin-left: 20%;
 	display: inline-block;
 	text-decoration: none;
 }
@@ -72,7 +72,7 @@ a:hover:after{
 
 header .login a{
 	width: 7%;
-	margin-left: 26%;
+	margin-left: 1%;
 	display: inline-block;
 	text-decoration: none;
 	color: white;
@@ -181,58 +181,46 @@ hr{
 
 
 footer{
-	width: 100%;
-	color: white;
-	display: block;
-	background: #794bc4;
-	padding-bottom: 2%;
+  width: 100%;
+  clear: both;
+  padding: 1em; 0
+  overflow: hidden;
+  background-color: #0d0d26;
+  color: #fff;
+  margin-top: 2%;
 }
 
 .colu1{
-	width: 75%;
+	width: 30%;
 	display: inline-block;
-	text-align: center;
-	margin-top: 1%;
-	color: black;
 }
-
-.fo1{
-	width: 17%;
-	display: inline-block;
-	margin-top: 2%;
-	margin-right: 4%;
-	margin-left: 1%;
-	color: white;
-}
-
-.fo1 div{
-	margin-top: 5%;
-	text-align: left;
-}
-
-.fo1 div:hover{
-	color: black;
-}
-
-.fo1 img{
-	width: 35%;
-	height: 35%;
-    border-radius:100px;
-}
-
-.fo1 img:Hover{
-	-webkit-transform:scale(1.3);transform:scale(1.3);
-}
-
-
 
 .colu2{
-	width: 24%;
+	width: 28%;
+	margin-right: 2%;
 	display: inline-block;
 	vertical-align: top;
-	margin-top: 1%;
-	text-align: center;
-	color: black;
 }
+
+.colu3{
+	width: 30%;
+	margin-right: 2%;
+	display: inline-block;
+	vertical-align: top;	
+}
+
+.social ul {
+    list-style: none;
+    display: inline-block; 
+}
+
+.social ul li a {
+    display: inline-block;
+    text-decoration: none;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease; 
+}
+
 
 

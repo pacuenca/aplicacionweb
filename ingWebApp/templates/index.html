@@ -1,31 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>InstaInfo</title>
-	<link rel="stylesheet" type="text/css" href="../static/css/estilos.css">
-	<link rel="icon" type="image/png" href="../static/image/inf.png" />
-	<meta charset="utf-8">
-</head>
+{% extends "master.html" %}
+{% load staticfiles %}
 
-<header>
-	<span class="titulo">
-		<img src="../static/image/in.png">
-		<h1>InstaInfo</h1>
-	</span>
+{% block titulo %}
+  InstaInfo | Ing Web
+{% endblock %}
 
-	<nav>
-		 <ul id="ejm1">
-            <a href="#">Home</a>
-            <a href="#">Estadísticas</a>
-            <a href="#">Gráficas</a>
-	</nav>
-
-	<span class="login">
-		<a href="">Sign In</a>
-	</span>
-</header>
-<body>
-
+{% block contenido %}
 <section class="home">
 	<section class="izquierda">
 		<h2>Creando Infografías Innovadoras e Informátivas ...</h2>
@@ -104,37 +84,6 @@
 	</div>
 </section>
 
-<footer>
-	<section class="colu1">
-		<h2>CONTACTOS</h2>
-		<section class="fo1">
-			<img src="../static/image/klever.jpg">
-			<div>Klever Sarango<br>
-			    kf2sarango@gamil.com</div>
-		</section>
-
-		<section class="fo1">
-			<img src="../static/image/paul.jpg">
-			<div>Paul Cuenca<br>
-			     pacuenca2012@gmail.com</div>
-		</section>
-
-		<section class="fo1">
-			<img src="../static/image/liz.jpg">
-			<div>Lizbet Pacheco<br>
-			     pacuenca2012@gmail.com</div>
-		</section>
-		
-	</section>
-
-	<section class="colu2">
-		<h2>UTPL</h2>
-	</section>
-
-</footer>
-
-</body>
-
-</html>
-
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+{% endblock %}

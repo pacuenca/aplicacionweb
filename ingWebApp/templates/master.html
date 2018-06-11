@@ -1,0 +1,68 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>
+      {% block titulo %}
+      {% endblock %}
+    </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <link rel="shortcut icon" href="{% static 'image/inf.png' %}">
+    {% block enlaces %}
+    {% endblock %}
+  </head>
+
+  <header>
+  <span class="titulo">
+    <img src="../static/image/in.png">
+    <h1>InstaInfo</h1>
+  </span>
+
+  <nav>
+     <ul id="ejm1">
+            <a href="#">Home</a>
+            <a href="#">Estadísticas</a>
+            <a href="#">Gráficas</a>
+  </nav>
+
+  <span class="login">
+    <a href="#">Registro</a>
+    <a href="% url 'login' %">Sign In</a>
+  </span>
+</header>
+
+<body>
+  <main class="contenedor">
+    {% block contenido %}
+
+    {% endblock %}
+  </main>
+
+  <footer>
+    <section class="colu1">
+      <h2>UTPL</h2>
+            <p>Contacto<br/><b>Dirección:</b> Barrio San Cayetano Alto, calle Marcelino Champagnat s/n<br/><b>Teléfono:</b> 07 3701444</p>
+    </section>
+
+    <section class="colu2">
+      <h5>GRUPO-009</h5>
+      <p>Formación de Acadamias GP 3.1</p>
+    </section>
+
+    <section class="colu3">
+      <div class="social">
+        <ul>
+          <li>Klever Sarango | kfsarango@utpl.edu.ec | <i class="far fa-envelope"></i><a href="https://www.facebook.com/kfsarango1?fref=hovercard&hc_location=chat" target="_blank"> <i class="fab fa-facebook-square"></i> </a></li>
+          <li>Paul Cuenca | pacuenca@utpl.edu.ec | <i class="far fa-envelope"></i><a href="https://www.facebook.com/paulandres.cuencamacas" target="_blank"> <i class="fab fa-facebook-square"></i></a></li>
+        </ul>
+      </div>
+    </section>
+
+  </footer>
+
+</body>
+
