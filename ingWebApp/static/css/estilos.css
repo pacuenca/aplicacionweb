@@ -12,8 +12,9 @@ main{
 
 }
 
-header{
+#myHeader {
 	width: 100%;
+<<<<<<< HEAD
 	color: white;
 	display: inline-block;
 	background: #00667D;
@@ -26,42 +27,24 @@ header .titulo{
 	display: inline-block;
 	font-family:  sans-serif;
 	font-style: italic;
+=======
+	height: 52px;
+	padding: 0;
+	position: fixed;
+	background-color: #00667D;
+	z-index: 1;
+>>>>>>> 95ccb77c8728311802b025258c515f4f2acea2cb
+}
+#myHeader a {
+	color: #FCFFFC;
+}
+#myHeader a {
+	background-color: transparent;
 }
 
-.titulo img{
-	display: inline-block;
-	margin-top: 2%;
-	margin-right: 7%;
-}
-
-.titulo h1{
-	display: inline-block;
-	vertical-align: center;
-}
-
-
-
-header nav{
-	width: 35%;
-	margin-left: 10%;
-	display: inline-block;
-	text-decoration: none;
-	vertical-align: top;
-	padding-top: 2%;
-}
-
-
-header nav a{
-	text-decoration: none;
-	color: white;
-	margin-left: 10%;
-    position: relative;
-    font-weight:bold;
-}
-
-a:after{
+#myHeader .item:after{
     position: absolute;
-    bottom: 7px;
+    bottom: 20px;
     left: 0px;
     width: 100%;
     height: 4px;
@@ -72,28 +55,20 @@ a:after{
     transform: translateY(20px);        
 }
 
-a:hover:after{
+#myHeader .item:hover:after{
     opacity:1;
     transform: translateY(15px)
 }
-
-header .login{
-	margin-left: 16%;
-	vertical-align: top;
+#myHeader .tagA {
+	color: rgba(0, 0, 0, 0.3);
 }
-
-header .login a{
-	width: 6%;
-	display: inline-block;
-	text-decoration: none;
-	color: white;
-	padding-top: 2%;
+#myHeader .tagA:hover {
+	color: rgba(0, 0, 0, 0.7);
 }
-
-header .login a:hover{
-	display: inline-block;
-	border: 2px solid #FFD743;
-	border-radius: 20px;
+#myHeader img {
+	width: 35px;
+	border-radius: 50%;
+	margin-top: -5px;
 }
 
 body{
