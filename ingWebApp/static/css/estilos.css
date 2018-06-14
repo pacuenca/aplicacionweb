@@ -8,8 +8,8 @@ header{
 	width: 100%;
 	color: white;
 	display: inline-block;
-	background: #794bc4;
-	padding-bottom: 1%;
+	background: #073642;
+
 }
 
 header span h1:hover{
@@ -20,11 +20,13 @@ header .titulo{
 	width: 20%;
 	margin-left: 3%;
 	display: inline-block;
+	font-family:  sans-serif;
+	font-style: italic;
 }
 
 .titulo img{
 	display: inline-block;
-	margin-top: 1%;
+	margin-top: 2%;
 	margin-right: 7%;
 }
 
@@ -37,9 +39,11 @@ header .titulo{
 
 header nav{
 	width: 35%;
-	margin-left: 20%;
+	margin-left: 10%;
 	display: inline-block;
 	text-decoration: none;
+	vertical-align: top;
+	padding-top: 2%;
 }
 
 
@@ -49,7 +53,6 @@ header nav a{
 	margin-left: 10%;
     position: relative;
     font-weight:bold;
-    margin: 0px 15px;
 }
 
 a:after{
@@ -70,13 +73,17 @@ a:hover:after{
     transform: translateY(15px)
 }
 
+header .login{
+	margin-left: 16%;
+	vertical-align: top;
+}
+
 header .login a{
-	width: 7%;
-	margin-left: 1%;
+	width: 6%;
 	display: inline-block;
 	text-decoration: none;
 	color: white;
-	padding: 1%;
+	padding-top: 2%;
 }
 
 header .login a:hover{
