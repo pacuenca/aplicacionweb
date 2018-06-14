@@ -1,0 +1,90 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat|Patua+One|Roboto+Slab";
+.board {
+  width: 100%;
+  background-color: #444555;
+  overflow: hidden; }
+  .board .columnas {
+    float: left;
+    margin: 1%;
+    background-color: #2B2D37;
+    min-height: 20em; }
+  .board #cont_left {
+    width: 20%; }
+  .board #cont_right {
+    width: 14%; }
+  .board #cont_center {
+    width: 60%; }
+    .board #cont_center #cont_template2 {
+      width: 100%;
+      background-color: #33cc33;
+      padding: 10px; }
+      .board #cont_center #cont_template2 #encabezado {
+        width: 100%;
+        overflow: hidden;
+        border-bottom: 5px solid #fff; }
+        .board #cont_center #cont_template2 #encabezado .cont_title {
+          width: 60%;
+          float: left; }
+          .board #cont_center #cont_template2 #encabezado .cont_title .title {
+            color: #fff; }
+          .board #cont_center #cont_template2 #encabezado .cont_title article {
+            color: #e0e0eb;
+            margin-bottom: 1%; }
+        .board #cont_center #cont_template2 #encabezado .cont_logo {
+          width: 40%;
+          float: left; }
+      .board #cont_center #cont_template2 #cuerpo {
+        width: 100%;
+        overflow: hidden; }
+        .board #cont_center #cont_template2 #cuerpo .cont_chart {
+          width: 68%;
+          float: left;
+          margin: 2% 0;
+          padding: 10px 15px;
+          display: table; }
+          .board #cont_center #cont_template2 #cuerpo .cont_chart .bx_chart {
+            width: 100%;
+            background-color: #fff;
+            display: table-cell;
+            vertical-align: middle; }
+            .board #cont_center #cont_template2 #cuerpo .cont_chart .bx_chart .chart {
+              width: 100%;
+              height: 20em; }
+            .board #cont_center #cont_template2 #cuerpo .cont_chart .bx_chart article {
+              width: 100%;
+              text-align: center; }
+        .board #cont_center #cont_template2 #cuerpo .cont_items {
+          width: 32%;
+          float: left;
+          border-left: 2px dashed #fff; }
+          .board #cont_center #cont_template2 #cuerpo .cont_items ul {
+            list-style: none; }
+            .board #cont_center #cont_template2 #cuerpo .cont_items ul li {
+              display: block;
+              padding: 10px; }
+              .board #cont_center #cont_template2 #cuerpo .cont_items ul li img {
+                display: inline-block; }
+              .board #cont_center #cont_template2 #cuerpo .cont_items ul li span {
+                font-size: 5em;
+                margin-left: 2%;
+                color: #3333ff; }
+              .board #cont_center #cont_template2 #cuerpo .cont_items ul li hr {
+                border: 0;
+                height: 1px;
+                background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+                color: #fff; }
+
+.centrar {
+  text-align: center; }
+
+.title {
+  font-family: "Roboto Slab", serif;
+  font-size: 2em; }
+
+.subtitle {
+  font-family: "Patua One", cursive; }
+
+.text {
+  font-family: "Montserrat", sans-serif; }
+
+/*# sourceMappingURL=stylesk.css.map */

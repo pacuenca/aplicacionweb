@@ -1,0 +1,102 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat|Patua+One|Roboto+Slab"
+
+$ltTitle: 'Roboto Slab', serif
+$ltSubTitle: 'Patua One', cursive
+$ltText: 'Montserrat', sans-serif
+
+.board
+    width: 100%
+    background-color: #444555
+    overflow: hidden
+    .columnas
+        float: left
+        margin: 1%
+        background-color: #2B2D37
+        min-height: 20em
+
+
+    #cont_left
+        width: 20%
+
+    #cont_right
+        width: 14%
+
+    #cont_center
+        width: 60%
+        #cont_template2
+            width: 100%
+            background-color: #33cc33
+            padding: 10px
+            
+            #encabezado
+                width: 100%
+                overflow: hidden
+                border-bottom: 5px solid #fff
+                .cont_title
+                    width: 60%
+                    float: left
+                    .title
+                        color: #fff
+                    article
+                        color: #e0e0eb
+                        margin-bottom: 1%
+                .cont_logo
+                    width: 40%
+                    float: left
+
+            #cuerpo
+                width: 100%
+                overflow: hidden
+                .cont_chart
+                    width: 68%
+                    float: left
+                    margin: 2% 0
+                    padding: 10px 15px
+                    display: table  
+                    .bx_chart
+                        width: 100%
+                        background-color: #fff
+                        display: table-cell
+                        vertical-align: middle
+                        .chart
+                            width: 100%
+                            height: 20em
+                        article
+                            width: 100%
+                            text-align: center
+                            
+                    
+                
+                .cont_items
+                    width: 32%
+                    float: left
+                    border-left: 2px dashed #fff
+                    ul
+                        list-style: none
+                        li
+                            display: block
+                            padding: 10px
+                            img
+                                display: inline-block
+                            span
+                                font-size: 5em
+                                margin-left: 2%
+                                color: #3333ff
+                            
+                            hr
+                                border: 0
+                                height: 1px
+                                background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))
+                                color: #fff
+                    
+
+//stilos generales
+.centrar
+    text-align: center
+.title
+    font-family: $ltTitle
+    font-size: 2em
+.subtitle
+    font-family: $ltSubTitle
+.text
+    font-family: $ltText

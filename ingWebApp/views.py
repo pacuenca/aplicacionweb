@@ -19,3 +19,11 @@ def index_view(request):
     diccionario = {'saludo': pe}
     return render(request, 'index.html', diccionario,
                   context_instance=RequestContext(request))
+                
+
+def goTemplate2(request):
+    pe="hola"
+
+    diccionario = {'saludo': pe}
+    return render(request, 'infografia/plantilla2.html', diccionario,
+                  context_instance=RequestContext(request))
