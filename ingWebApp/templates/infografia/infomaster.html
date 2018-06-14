@@ -1,0 +1,21 @@
+{% extends "master.html" %}
+{% load staticfiles %}
+
+{% block contenido %}
+<section class="board">
+    <section id="cont_left" class="columnas">
+
+    </section>
+
+    <section id="cont_center" class="columnas">
+        {% block infografia %}
+        
+        {% endblock %}
+    </section>
+    
+    <section id="cont_right" class="columnas">
+
+    </section>
+</section>
+
+{% endblock %}
