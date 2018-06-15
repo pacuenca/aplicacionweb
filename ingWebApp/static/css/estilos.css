@@ -3,14 +3,35 @@
 	padding: 0px;
 	box-sizing: border-box;
 }
+main{
+	background-image: url("../image/fondo.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	opacity:0.7; 
+
+}
 
 #myHeader {
 	width: 100%;
+	color: white;
+	display: inline-block;
+	background: #00667D;
+
+}
+
+header .titulo{
+	width: 20%;
+	margin-left: 3%;
+	display: inline-block;
+	font-family:  sans-serif;
+	font-style: italic;
 	height: 52px;
 	padding: 0;
 	position: fixed;
 	background-color: #00667D;
 	z-index: 1;
+
 }
 #myHeader a {
 	color: #FCFFFC;
@@ -25,7 +46,7 @@
     left: 0px;
     width: 100%;
     height: 4px;
-    background-color: #FFD743;
+    background-color: #00E0E0;
     content: "";
     opacity: 0;
     transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
@@ -151,7 +172,7 @@ footer{
   background-color: #0d0d26;
   color: #fff;
   margin-top: 2%;
-  background-image: url("../image/pie.jpg");
+  background-image: url("../image/logos/pie-logos.jpg");
 }
 
 .colu1{
