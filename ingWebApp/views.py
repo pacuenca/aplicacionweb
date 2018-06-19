@@ -27,3 +27,10 @@ def goTemplate2(request):
     diccionario = {'saludo': pe}
     return render(request, 'infografia/plantilla2.html', diccionario,
                   context_instance=RequestContext(request))
+
+def irLogin(request):
+    pe="hola"
+
+    diccionario = {'saludo': pe}
+    return render(request, 'login.html', diccionario,
+                  context_instance=RequestContext(request))
