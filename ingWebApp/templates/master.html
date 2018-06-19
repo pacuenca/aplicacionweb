@@ -10,8 +10,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/estilosp.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
     <link rel="shortcut icon" href="{% static 'image/in.png' %}">
     {% block enlaces %}
     {% endblock %}
@@ -21,7 +22,6 @@
     <header class="encabezado" id="myHeader" >
         <div class="container-fluid">
             <div class="logo">
-                <!--img src="../static/image/in.png"-->
                 <a class="navbar-brand" href="/">InstaInfo</a>
             </div>
             <div class="navbar-header navbar-default">
@@ -35,8 +35,8 @@
                 <ul class="nav-site nav navbar-nav navbar-right">
                     <li><a href="" class="item">Home</a></li>
                     <li><a href="" class="item">Estadisticas</a></li>
+                    <li><a href="" class="item">Gráficas</a></li>
                     <li><a href="" class="item">Entrar</a></li>
-                    <li><a href="" class="item">Registrar</a></li>
                     <li class="dropdown" *ngIf="_us.userFB">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="../static/image/user.png" role="button" alt="fotoPerfil">
                              Name User <span class="caret"></span></a>
@@ -58,26 +58,39 @@
   </main>
 
   <footer>
-    <section class="colu1">
+    <section class="container">
+    <section class="row">
+      <section class="col-md-4" id="col">
         <img src="../static/image/logos/utpl.png">
-          <p>Contacto<br/><b>Dirección:</b> Barrio San Cayetano Alto, calle Marcelino Champagnat s/n<br/><b>Teléfono:</b> 07 3701444</p>
-    </section>
+        <p><b>Dirección:</b> Barrio San Cayetano Alto, calle Marcelino Champagnat s/n<br/><b>Teléfono:</b> 07 3701444</p>
+      </section>
 
-    <section class="colu2">
-      <img src="../static/image/logos/taw.png">
-    </section>
+      <section class="col-md-4" id="col">
+        <img src="../static/image/logos/taw.png">
+      </section>
 
-    <section class="colu3">
-      <div class="social">
-        <ul>
-          <li>Klever Sarango | kfsarango@utpl.edu.ec | <i class="far fa-envelope"></i><a href="https://www.facebook.com/kfsarango1?fref=hovercard&hc_location=chat" target="_blank"> <i class="fab fa-facebook-square"></i> </a></li>
-          <li>Paul Cuenca | pacuenca@utpl.edu.ec | <i class="far fa-envelope"></i><a href="https://www.facebook.com/paulandres.cuencamacas" target="_blank"> <i class="fab fa-facebook-square"></i></a></li>
-          <li>Lizbeth Pacheco | lcpacheco1@utpl.edu.ec | <i class="far fa-envelope"></i><a href="https://www.facebook.com/paulandres.cuencamacas" target="_blank"> <i class="fab fa-facebook-square"></i></a></li>
-        </ul>
-      </div>
+      <section class="col-md-4" id="col">
+        <h3>Contactos</h3>
+        <div class="social">
+          <ul>
+            <li>Klever Sarango | kfsarango@utpl.edu.ec | <i class="far fa-envelope"></i>  <a href="https://www.facebook.com/kfsarango1?fref=hovercard&hc_location=chat" target="_blank"><img alt="siguenos en facebook" height="32" src="http://2.bp.blogspot.com/-q_Tm1PpPfHo/UiXnJo5l-VI/AAAAAAAABzU/MKdrVYZjF0c/s1600/face.png" title="siguenos en facebook" width="32" /></a><i class="fab fa-facebook-square"></i> </a></li><br>
+
+            <li>Paul Cuenca | pacuenca@utpl.edu.ec | <i class="far fa-envelope"></i><a href="https://www.facebook.com/paulandres.cuencamacas" target="_blank"><img alt="siguenos en facebook" height="32" src="http://2.bp.blogspot.com/-q_Tm1PpPfHo/UiXnJo5l-VI/AAAAAAAABzU/MKdrVYZjF0c/s1600/face.png" title="siguenos en facebook" width="32" /></a> <i class="fab fa-facebook-square"></i></a></li>
+            <br>
+
+             
+
+            <li>Lizbeth Pacheco | lcpacheco1@utpl.edu.ec | <i class="far fa-envelope"></i><a href="https://www.facebook.com/kfsarango1?fref=hovercard&hc_location=chat" target="_blank"><img alt="siguenos en facebook" height="32" src="http://2.bp.blogspot.com/-q_Tm1PpPfHo/UiXnJo5l-VI/AAAAAAAABzU/MKdrVYZjF0c/s1600/face.png" title="siguenos en facebook" width="32" /></a><i class="fab fa-facebook-square"></i></a></li>
+
+          </ul>
+        </div>
+      </section>
+    </section>
     </section>
 
   </footer>
+
+  <script type="text/javascript" src=""></script>
 
 </body>
 

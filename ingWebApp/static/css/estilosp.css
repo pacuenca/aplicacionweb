@@ -3,21 +3,16 @@
 	padding: 0px;
 	box-sizing: border-box;
 }
-main{
-	background-image: url("../image/fondo.jpg");
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-	opacity:0.7; 
 
-}
 
 #myHeader {
 	width: 100%;
-<<<<<<< HEAD
 	color: white;
 	display: inline-block;
-	background: #00667D;
+	background: rgb(72, 44, 191);
+	background: -webkit-linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
+	background: -o-linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
+	background: linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
 
 }
 
@@ -27,13 +22,11 @@ header .titulo{
 	display: inline-block;
 	font-family:  sans-serif;
 	font-style: italic;
-=======
 	height: 52px;
 	padding: 0;
 	position: fixed;
 	background-color: #00667D;
 	z-index: 1;
->>>>>>> 95ccb77c8728311802b025258c515f4f2acea2cb
 }
 #myHeader a {
 	color: #FCFFFC;
@@ -71,23 +64,35 @@ header .titulo{
 	margin-top: -5px;
 }
 
+	
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight:400;
+  font-size:24px;
+  text-align:center;
+  color:#16a085;
+  margin:40px 0 120px 0;
+}
+
+
 body{
 	width: 100%;
-	background: white;
 	margin: 0px;
 	padding: 0px;
 	display: inline-block;
 }
 
+.contenedor{
+	background: #cccccc;
+}
+
 .home{
 	width: 100%;
-	margin-top: 5%;
-	margin-bottom: 5%;
 	display: block;
 }
 
 .izquierda{
-	width: 50%;
+	width: 100%;
 	display: inline-block;
 }
 
@@ -99,13 +104,13 @@ body{
 
 @keyframes slidein {
   from {
-    margin-left: 48%;
-    width: 48%; 
+    margin-left: 70%;
+    width: 30%; 
   }
 
   to {
     margin-left: 0%;
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -113,55 +118,102 @@ body{
 
 .derecha{
 	width: 47%;
-	background: black;
 	display: inline-block;
 }
 
-
-
 .estadisticas{
 	width: 100%;
-	margin-top: 2%;
-	margin-bottom: 3%;
-	text-align: justify;
-	padding: 2%;
 }
 
 .estadisticas h2{
+	width: 17%;
+	margin-left: 73%;
 	text-align: center;
-	padding-bottom: 1%;
+	padding: 1%;
 	color: #4f0299;
 }
 
-#grafico1{
-	width: 50%;
-	height: 300px;
-	margin-top: 3%;
+.estadisticas h2:hover{
+	background: rgba(0,0,0,0);
+	color: #3a7999;
+	box-shadow: inset 0 0 0 3px #3a7999;
+}
+
+.d1{
+	width: 30%;
+	display: inline-block;
+	margin-left: 5%;
+	
+}
+
+.d1 img{
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid rgba(0,0,0,0.5);
+}
+
+.i1{
+	width: 40%;
+	margin-left: 5%;
+	display: inline-block;
+}
+
+.i1 p{
+	width: 100%;
+	border: 1px solid rgba(0,0,0,0.5);
 }
 
 .graficas{
 	width: 100%;
-	margin-top: 5%;
-	margin-bottom: 3%;
-	text-align: justify;
-	padding: 2%;
 	color: #4f0299;
 }
 
 .graficas h2{
+	width: 17%;
+	padding: 1%;
+	margin-left: 10%;
 	text-align: center;
 	padding-bottom: 1%;
+	padding: 1%;
+	color: #4f0299;
 }
 
-#grafico2{
-	width: 50%;
-	height: 300px;
+.graficas h2:hover{
+	background: rgba(0,0,0,0);
+	color: #3a7999;
+	box-shadow: inset 0 0 0 3px #3a7999;
+}
+
+.d2{
+	width: 40%;
+	margin-left: 5%;
+	display: inline-block;
+}
+
+.d2 p{
+	width: 100%;
+	border: 1px solid rgba(0,0,0,0.5);
+
+}
+
+
+.i2{
+	width: 30%;
+	display: inline-block;
+	margin-left: 5%;
+	
+}
+
+.i2 img{
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid rgba(0,0,0,0.5);
 }
 
 hr{
 	width: 90%;
 	color: #794bc4;
-	size: "30";
+	size: "40";
 	margin: auto;
 }
 
@@ -177,23 +229,9 @@ footer{
   background-image: url("../image/logos/pie-logos.jpg");
 }
 
-.colu1{
+#col{
 	width: 30%;
 	display: inline-block;
-}
-
-.colu2{
-	width: 28%;
-	margin-right: 2%;
-	display: inline-block;
-	vertical-align: top;
-}
-
-.colu3{
-	width: 30%;
-	margin-right: 2%;
-	display: inline-block;
-	vertical-align: top;	
 }
 
 .social ul {
