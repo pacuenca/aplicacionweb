@@ -5,4 +5,5 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include('ingWebApp.urls')),
     url(r'^ingWebApp/', include('ingWebApp.urls')),
+    url(r'^login', 'irLogin', name='login'),
 ]

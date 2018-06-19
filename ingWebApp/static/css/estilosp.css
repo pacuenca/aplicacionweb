@@ -27,6 +27,10 @@ header .titulo{
 	position: fixed;
 	background-color: #00667D;
 	z-index: 1;
+<<<<<<< HEAD:ingWebApp/static/css/estilosp.css
+=======
+
+>>>>>>> 9a336dda21726948a42613d1e1599055e6a8e1be:ingWebApp/static/css/estilos.css
 }
 #myHeader a {
 	color: #FCFFFC;
@@ -221,7 +225,7 @@ hr{
 footer{
   width: 100%;
   clear: both;
-  padding: 1em; 0
+  padding: 1em; 
   overflow: hidden;
   background-color: #0d0d26;
   color: #fff;
