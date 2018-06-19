@@ -14,7 +14,6 @@ main{
 
 #myHeader {
 	width: 100%;
-<<<<<<< HEAD
 	color: white;
 	display: inline-block;
 	background: #00667D;
@@ -27,13 +26,12 @@ header .titulo{
 	display: inline-block;
 	font-family:  sans-serif;
 	font-style: italic;
-=======
 	height: 52px;
 	padding: 0;
 	position: fixed;
 	background-color: #00667D;
 	z-index: 1;
->>>>>>> 95ccb77c8728311802b025258c515f4f2acea2cb
+
 }
 #myHeader a {
 	color: #FCFFFC;
@@ -169,7 +167,7 @@ hr{
 footer{
   width: 100%;
   clear: both;
-  padding: 1em; 0
+  padding: 1em; 
   overflow: hidden;
   background-color: #0d0d26;
   color: #fff;

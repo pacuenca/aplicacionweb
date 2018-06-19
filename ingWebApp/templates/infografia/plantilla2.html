@@ -1,72 +1,79 @@
-{% extends "infomaster.html" %}
+{% extends "master.html" %}
 {% load staticfiles %}
 
-{% block titulo %}
-  Template 2 | Ing Web
-{% endblock %}
-
 {% block enlaces %}
-<link rel="stylesheet" href="{% static 'css/stylesk.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stylesk.css' %}">
 {% endblock %}
 
-{% block infografia %}
-<section id="cont_template2">
-    <div id="encabezado">
-        <div class="cont_title">
-            <h1 class="centrar title">TITULO</h1>
-            <h2 class="subtitle">Subtitulo</h2>
-            <article>
-                <p class="text">
-                    Introduccion breve
-                </p>
-            </article>
-        </div>
-        <div class="cont_logo">
-            <figure>
-                <img src="../../static/image/logos/utpl.png" alt="utpl logo">
-            </figure>
-        </div>
-    </div>
-    <div id="cuerpo">
-        <div class="cont_chart">
-            <div class="bx_chart">
-                <img  class="chart" src="../../static/image/src/template2/pie.jpeg" alt="imagen de pie">
-                <article>
-                    <p class="text">
-                        Añade una descripción
-                    </p>
-                </article>
-            </div>
-        </div>
-        <div class="cont_items">
-            <ul>
-                <li>
-                    <img src="../../static/image/src/template2/contract.png" alt="Icono">
-                    <span>10</span>
-                    <p class="text">Breve descripción</p>
-                    <hr>
-                </li>
-                <li>
-                    <img src="../../static/image/src/template2/contract.png" alt="Icono">
-                    <span>62</span>
-                    <p class="text">Breve descripción</p>
-                    <hr>
-                </li>
-                <li>
-                    <img src="../../static/image/src/template2/contract.png" alt="Icono">
-                    <span>13</span>
-                    <p class="text">Breve descripción</p>
-                    <hr>
-                </li>
-                <li>
-                    <img src="../../static/image/src/template2/contract.png" alt="Icono">
-                    <span>17</span>
-                    <p class="text">Breve descripción</p>
-                    <hr>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
+{% block contenido %}
+<section class="board">
+    <section id="cont_left" class="columnas">
 
+    </section>
+
+    <section id="cont_center" class="columnas">
+            <section id="cont_template2">
+                    <div id="encabezado">
+                        <div class="cont_title">
+                            <h1 class="centrar title">TITULO</h1>
+                            <h2 class="subtitle">Subtitulo</h2>
+                            <article>
+                                <p class="text">
+                                    Introduccion breve
+                                </p>
+                            </article>
+                        </div>
+                        <div class="cont_logo">
+                            <figure>
+                                <img src="../../static/image/logos/utpl.png" alt="utpl logo">
+                            </figure>
+                        </div>
+                    </div>
+                    <div id="cuerpo">
+                        <div class="cont_chart">
+                            <div class="bx_chart">
+                                <img  class="chart" src="../../static/image/src/template2/pie.jpeg" alt="imagen de pie">
+                                <article>
+                                    <p class="text">
+                                        Añade una descripción
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="cont_items">
+                            <ul>
+                                <li>
+                                    <img src="../../static/image/src/template2/contract.png" alt="Icono">
+                                    <span>10</span>
+                                    <p class="text">Breve descripción</p>
+                                    <hr>
+                                </li>
+                                <li>
+                                    <img src="../../static/image/src/template2/contract.png" alt="Icono">
+                                    <span>62</span>
+                                    <p class="text">Breve descripción</p>
+                                    <hr>
+                                </li>
+                                <li>
+                                    <img src="../../static/image/src/template2/contract.png" alt="Icono">
+                                    <span>13</span>
+                                    <p class="text">Breve descripción</p>
+                                    <hr>
+                                </li>
+                                <li>
+                                    <img src="../../static/image/src/template2/contract.png" alt="Icono">
+                                    <span>17</span>
+                                    <p class="text">Breve descripción</p>
+                                    <hr>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+    </section>
+    
+    <section id="cont_right" class="columnas">
+
+    </section>
+</section>
 {% endblock %}
